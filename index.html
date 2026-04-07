@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DONE - Protein Drink</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="social-icons">
+      <div class="social-icons">
+        <button class="social-btn" aria-label="TikTok">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16" height="16" fill="currentColor">
+            <path
+              d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z" />
+          </svg>
+        </button>
+        <button class="social-btn" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16" height="16" fill="currentColor">
+            <path
+              d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+          </svg>
+        </button>
+        <button class="social-btn" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="16" height="16" fill="currentColor">
+            <path
+              d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="logo-container">
+      <div class="logo-badge">DONE</div>
+    </div>
+    <div class="nav-links">
+      <a href="#" class="nav-pill">Our story</a>
+      <a href="#" class="nav-pill">Our flavors</a>
+    </div>
+  </nav>
+
+  <main class="hero">
+    <div class="hero-text-section">
+      <h1 class="anim-text main-heading">
+        Your gut's favorite <br />
+        <span class="main-heading-span">protein</span> drink
+      </h1>
+      <p style="font-family: RocaOneBold;" class="anim-text">
+        DONE is the protein drink you'll actually finish<br />and crave again
+        tomorrow.
+      </p>
+
+      <button class="shop-btn anim-text">SHOP NOW &rarr;</button>
+
+      <div class="play-video-wrapper anim-text">
+        <div class="circular-text">
+          <svg viewBox="0 0 160 160" width="100%" height="100%">
+            <path id="circlePath" d="M 80, 80 m -55, 0 a 55,55 0 1,1 110,0 a 55,55 0 1,1 -110,0" fill="none" />
+            <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#3b1c1c" letter-spacing="4.5">
+              <textPath class="playtext" href="#circlePath" startOffset="0%">
+                PLAY VIDEO • PLAY VIDEO • PLAY VIDEO •
+              </textPath>
+            </text>
+          </svg>
+        </div>
+
+        <button class="play-btn">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="#3b1c1c">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="hero-image-section">
+      <img src="./Images/Three images.avif" alt="DONE Protein Drinks" class="hero-bottles-img" />
+    </div>
+  </main>
+
+  <section class="ticker-section">
+    <div class="ticker-wrapper">
+      <div class="ticker-content row-1">
+        <span class="ticker-pill pill-pink">High fiber</span>
+        <span class="ticker-pill pill-orange">Prebiotic fiber</span>
+        <span class="ticker-pill pill-red">Non-GMO</span>
+        <span class="ticker-pill pill-light-pink">No artificial sweeteners</span>
+        <span class="ticker-pill pill-beige">Gluten free</span>
+        <span class="ticker-pill pill-off-white">No added sugar</span>
+        <span class="ticker-pill pill-red-dark">High protein</span>
+        <span class="ticker-pill pill-brown">Lactose free</span>
+        <!-- Duplicate for seamless scroll -->
+        <span class="ticker-pill pill-pink">High fiber</span>
+        <span class="ticker-pill pill-orange">Prebiotic fiber</span>
+        <span class="ticker-pill pill-red">Non-GMO</span>
+        <span class="ticker-pill pill-light-pink">No artificial sweeteners</span>
+        <span class="ticker-pill pill-beige">Gluten free</span>
+        <span class="ticker-pill pill-off-white">No added sugar</span>
+        <span class="ticker-pill pill-red-dark">High protein</span>
+        <span class="ticker-pill pill-brown">Lactose free</span>
+      </div>
+    </div>
+    <div class="ticker-wrapper">
+      <div class="ticker-content row-2">
+        <span class="ticker-pill pill-light-pink">No artificial sweeteners</span>
+        <span class="ticker-pill pill-beige">Gluten free</span>
+        <span class="ticker-pill pill-off-white">No added sugar</span>
+        <span class="ticker-pill pill-red-dark">High protein</span>
+        <span class="ticker-pill pill-brown">Lactose free</span>
+        <span class="ticker-pill pill-pink">High fiber</span>
+        <span class="ticker-pill pill-orange">Prebiotic fiber</span>
+        <span class="ticker-pill pill-red">Non-GMO</span>
+        <!-- Duplicate for seamless scroll -->
+        <span class="ticker-pill pill-light-pink">No artificial sweeteners</span>
+        <span class="ticker-pill pill-beige">Gluten free</span>
+        <span class="ticker-pill pill-off-white">No added sugar</span>
+        <span class="ticker-pill pill-red-dark">High protein</span>
+        <span class="ticker-pill pill-brown">Lactose free</span>
+        <span class="ticker-pill pill-pink">High fiber</span>
+        <span class="ticker-pill pill-orange">Prebiotic fiber</span>
+        <span class="ticker-pill pill-red">Non-GMO</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits-section">
+    <div class="benefits-header">
+      <span class="badge">BENEFITS</span>
+      <h2 class="benefits-title">Your gut knows</h2>
+      <h1 class="benefits-title2">so does science</h1>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="grid-card card-brown">
+        <h3>Better gut, better you</h3>
+        <p>High fiber. No lactose. No bloat. Just a smooth ride for your gut.</p>
+      </div>
+      <div class="grid-card card-orange">
+        <h3>Daily movement starts from within</h3>
+        <p>Powered by protein and prebiotic fiber to support gut health and strength.</p>
+      </div>
+      <div class="grid-card card-tall card-pink">
+        <img src="./Images/3.avif" alt="Strawberry Drink" class="card-img">
+      </div>
+      <div class="grid-card card-blue card-tall">
+        <img src="./Images/2.avif" alt="Holding DONE" class="card-img">
+      </div>
+      <div class="grid-card card-brown-img">
+        <img src="./Images/1.avif" alt="Scattered Ingredients" class="card-img">
+      </div>
+      <div class="grid-card card-pink-text">
+        <h3>Clean never tasted this good</h3>
+        <p>No seed oils. Nothing artificial. Easy on your gut.</p>
+      </div>
+      <div class="grid-card card-beige-img">
+        <img src="./Images/4.avif" alt="Bottles and Ingredients" class="card-img">
+      </div>
+    </div>
+  </section>
+
+  <section class="flavors-section">
+    <div class="flavors-header">
+      <span class="badge">OUR FLAVORS</span>
+      <h2 class="flavors-title">Choose your flavor</h2>
+      <h1 class="flavors-title2">crush the craving</h1>
+    </div>
+
+    <div class="flavors-container">
+      <div class="flavor-card card-chocolate">
+        <div class="card-text">
+          <h3>Chocolate</h3>
+          <p>Smooth chocolate. Real flavor. Nothing fake.</p>
+        </div>
+        <div class="flavor-image-wrapper">
+          <img src="./Images/5.avif" alt="Chocolate Flavor" class="flavor-img">
+        </div>
+        <button class="shop-btn-small">SHOP NOW &rarr;</button>
+      </div>
+
+      <div class="flavor-card card-caramel">
+        <div class="card-text">
+          <h3>Salted Caramel</h3>
+          <p>Sweet caramel. Salty finish. Shockingly smooth.</p>
+        </div>
+        <div class="flavor-image-wrapper">
+          <img src="./Images/6.avif" alt="Salted Caramel" class="flavor-img">
+        </div>
+        <button class="shop-btn-small">SHOP NOW &rarr;</button>
+      </div>
+
+      <div class="flavor-card card-strawberry">
+        <div class="card-text">
+          <h3>Strawberry</h3>
+          <p>Creamy strawberry. Full flavor. Zero crash.</p>
+        </div>
+        <div class="flavor-image-wrapper">
+          <img src="./Images/7.avif" alt="Strawberry" class="flavor-img">
+        </div>
+        <button class="shop-btn-small">SHOP NOW &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials-section">
+    <div class="testimonials-header">
+      <span class="badge">TESTIMONIALS</span>
+      <h2 class="testimonials-title">Why people keep</h2>
+      <h1 class="testimonials-title2">coming back</h1>
+    </div>
+
+    <div class="testimonials-carousel-wrapper">
+      <div class="testimonials-track">
+        <!-- Duplicate cards for infinite loop if needed, or use JS -->
+        <div class="testimonial-card card-orange">
+          <p>"I gave up on protein drinks because they all tasted fake. This one gets it right — and doesn't mess with my gut."</p>
+        </div>
+        <div class="testimonial-card card-red-light">
+          <p>"I didn't think I could love a protein drink. But this one makes me feel good, not just full."</p>
+        </div>
+        <div class="testimonial-card card-brown-dark">
+          <p>"Finally found a protein drink that doesn't fight my gut. It just fits — and I can feel the difference."</p>
+        </div>
+        <div class="testimonial-card card-pink-soft">
+          <p>"Clean protein in one drink? No bloat and no artificial sweeteners? It's about time."</p>
+        </div>
+        <!-- Duplicates for smooth auto-scroll -->
+        <div class="testimonial-card card-orange">
+          <p>"I gave up on protein drinks because they all tasted fake. This one gets it right — and doesn't mess with my gut."</p>
+        </div>
+        <div class="testimonial-card card-red-light">
+          <p>"I didn't think I could love a protein drink. But this one makes me feel good, not just full."</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-controls">
+      <button class="control-btn prev">&larr;</button>
+      <button class="control-btn next">&rarr;</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

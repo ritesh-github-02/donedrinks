@@ -1,0 +1,822 @@
+@font-face {
+    font-family: 'RocaOneBold';
+    src: url('./fonts/6866888577c4f214f4484c8b_HelveticaNeueCyr-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'RocaOneRegular';
+    src: url('./fonts/686688585213fcf3349a1180_RocaOne-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'RocaOneSemibold';
+    src: url('./fonts/68668858b5709b1766191e1a_RocaOne-Semibold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'HelveticaBold';
+    src: url('./fonts/6866888577c4f214f4484c8b_HelveticaNeueCyr-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'HelveticaRoman';
+    src: url('./fonts/68668885ee9a57f9367bb722_HelveticaNeueCyr-Roman.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'HelveticaMedium';
+    src: url('./fonts/6866888536a1b1eca62b6e6d_HelveticaNeueCyr-Medium.woff2') format('woff2');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Vertical Gradient from dark to faint salmon pink */
+    background: linear-gradient(
+        to bottom,
+        #f86f78 0%,    /* Darker salmon pink top */
+        #f78d8f 60%,   /* Original mid color */
+        #f7b2b6 100%   /* Fainter salmon pink bottom */
+    );
+    background-attachment: fixed; /* Keeps the gradient consistent as you scroll through hero */
+    color: #3b1c1c;
+    overflow-x: hidden;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: relative;
+    z-index: 10;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-btn {
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    border: 1px solid #3b1c1c;
+    background: transparent;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.social-btn:hover {
+    background: #3b1c1c;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logo-badge {
+    background: #fff;
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-weight: 900;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    border: 1px solid #3b1c1c;
+    font-family: 'HelveticaMedium', Verdana, sans-serif;
+}
+
+.logo-badge:hover {
+    background: #3b1c1c;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-pill {
+    text-decoration: none;
+    color: #3b1c1c;
+    background: #fff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: 'RocaOneRegular';
+}
+
+.nav-pill:hover {
+    background: #3b1c1c;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    padding: 0px 80px;
+    min-height: 88.6vh;
+    align-items: center;
+}
+
+.hero-text-section {
+    flex: 1;
+    max-width: 50%;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Georgia', serif;
+    /* Use your specific serif font here */
+    font-size: 5.5rem;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin-bottom: 25px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.shop-btn {
+    background: #d35435;
+    /* Orange/Rust CTA color */
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Circular Play Button */
+.play-video-wrapper {
+    position: absolute;
+    bottom: -120px;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Handles the infinite rotation */
+.circular-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: spinText 12s linear infinite;
+}
+
+@keyframes spinText {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.play-btn {
+    position: relative;
+    z-index: 2;
+    width: 89px;
+    height: 89px;
+    background-color: #fdf5e6;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Adding a tiny left padding optically centers a triangle inside a circle */
+    padding-left: 4px;
+
+}
+
+
+/* Image Section */
+.hero-image-section {
+    flex: 1;
+    position: relative;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-bottle {
+    position: absolute;
+    width: 320px;
+    height: 550px;
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.15));
+}
+
+/* Positioning and Tiliting to match image */
+.bottle-left {
+    transform: translateX(-240px) translateY(40px) rotate(-8deg);
+    z-index: 1;
+}
+
+.bottle-center {
+    transform: translateX(0) translateY(-30px) rotate(5deg);
+    z-index: 3;
+}
+
+.bottle-right {
+    transform: translateX(250px) translateY(50px) rotate(12deg);
+    z-index: 2;
+}
+
+.placeholder-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 2px solid white;
+}
+
+.main-heading {
+    font-family: 'RocaOneSemibold', sans-serif;
+    font-weight: 900;
+    font-size: 5rem;
+}
+
+.main-heading-span {
+    font-family: 'RocaOneRegular', sans-serif;
+}
+
+.playtext {
+    font-family: 'RocaOneRegular', sans-serif;
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+
+.hero-bottles-img {
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.15));
+}
+
+/* Ticker Section */
+.ticker-section {
+    background-color: #fdf5e6;
+    padding-top: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ticker-wrapper {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ticker-content {
+    display: flex;
+    gap: 15px;
+    padding: 5px 0;
+}
+
+.row-1 {
+    animation: tickerScrollLeft 30s linear infinite;
+}
+
+.row-2 {
+    animation: tickerScrollRight 35s linear infinite;
+}
+
+@keyframes tickerScrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes tickerScrollRight {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+.ticker-pill {
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #3b1c1c;
+    border: none;
+    box-shadow: none;
+    font-family: 'HelveticaMedium', sans-serif;
+    white-space: nowrap;
+}
+
+.pill-red { background-color: #e32b2b; color: white; }
+.pill-red-dark { background-color: #d35435; color: white; }
+.pill-brown { background-color: #6a3e37; color: white; }
+.pill-pink { background-color: #f9d8de; }
+.pill-orange { background-color: #fca11a; }
+.pill-light-pink { background-color: #f47b85; color: white; }
+.pill-beige { background-color: #c7966b; color: white; }
+.pill-off-white { background-color: #f7e6d8; }
+
+/* Benefits Section */
+.benefits-section {
+    background-color: #fdf5e6;
+    padding: 50px 50px;
+}
+
+.benefits-header {
+    text-align: center;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.badge {
+    border: 1px solid #3b1c1c;
+    padding: 8px 25px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-family: 'HelveticaMedium';
+    display: inline-block;
+    margin-bottom: 30px;
+    font-family: 'RocaOneRegular';
+}
+
+.benefits-title {
+    font-family: 'RocaOneBold';
+    font-size: 4.5rem;
+    line-height: 0.5;
+    color: #3b1c1c;
+}
+.benefits-title2{
+    font-family: 'RocaOneRegular';
+    font-size: 4.5rem;
+    line-height: 1.1;
+    color: #3b1c1c;
+}
+
+
+/* Bento Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(350px, auto);
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.grid-card {
+    border-radius: 40px;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-card h3 {
+    font-family: 'RocaOneSemibold';
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    line-height: 1;
+    color: inherit;
+}
+
+.grid-card p {
+    font-size: 1.2rem;
+    font-family: 'HelveticaRoman';
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+.card-brown { background-color: #6a3e37; color: white; grid-column: 1; grid-row: 1; }
+.card-orange { background-color: #fca11a; color: #3b1c1c; grid-column: 2; grid-row: 1; }
+.card-tall.card-pink { background-color: #fca1b1; grid-column: 3; grid-row: 1 / span 2; padding: 0; }
+.card-blue.card-tall { background-color: #0088cc; grid-column: 1; grid-row: 2 / span 2; padding: 0; }
+.card-brown-img { background-color: #6a3e37; grid-column: 2; grid-row: 2; padding: 0; }
+.card-pink-text { background-color: #fca1b1; color: white; grid-column: 2; grid-row: 3; }
+.card-beige-img { background-color: #f7e6d8; grid-column: 3; grid-row: 3; padding: 0; }
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.grid-card:not(.card-brown):not(.card-orange):not(.card-pink-text) {
+    padding: 0;
+}
+
+
+/* Flavors Section */
+.flavors-section {
+    background-color: #f7e6d8; /* Light peach/beige from the reference */
+    padding: 80px 50px;
+}
+
+.flavors-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.flavors-title {
+    font-family: 'RocaOneBold';
+    font-size: 4rem;
+    line-height: 0.8;
+    color: #3b1c1c;
+}
+
+.flavors-title2 {
+    font-family: 'RocaOneRegular';
+    font-size: 4rem;
+    line-height: 1.1;
+    color: #3b1c1c;
+}
+
+.flavors-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.flavor-card {
+    flex: 1;
+    border-radius: 40px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    max-width: 400px;
+}
+
+.card-chocolate { background-color: #b07c64; }
+.card-caramel { background-color: #f3c178; }
+.card-strawberry { background-color: #f9b1b1; }
+
+.card-text h3 {
+    font-family: 'RocaOneSemibold';
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #3b1c1c;
+}
+
+.card-text p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.flavor-image-wrapper {
+    width: 100%;
+    height: 300px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.flavor-img {
+    max-height: 350px;
+    width: auto;
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15));
+}
+
+.shop-btn-small {
+    background-color: #3b1c1c;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.card-caramel .shop-btn-small { background-color: #d35435; } 
+.card-strawberry .shop-btn-small { background-color: #e32b2b; }
+
+/* Wavy Divider styles (Re-added) */
+.wavy-divider {
+    width: 200%;
+    height: 120px;
+    margin-top: -1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.wavy-divider svg {
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    animation: waveFlow 20s linear infinite;
+}
+
+@keyframes waveFlow {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Responsiveness */
+
+/* Large screens (already covered mostly) */
+@media (max-width: 1400px) {
+    h1, .benefits-title, .benefits-title2 {
+        font-size: 4rem;
+    }
+}
+
+/* Tablets & Small Desktops */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+    
+    .hero {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .hero-text-section {
+        max-width: 100%;
+    }
+
+    h1, .benefits-title, .benefits-title2 {
+        font-size: 3.5rem;
+    }
+
+    .shop-btn {
+        margin: 0 auto;
+    }
+
+    .play-video-wrapper {
+        position: relative;
+        bottom: 0;
+        margin: 40px auto 0;
+    }
+
+    .hero-image-section {
+        height: auto;
+        min-height: 400px;
+    }
+
+    .hero-bottles-img {
+        max-width: 80%;
+    }
+
+    /* Benefits Grid */
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .card-tall.card-pink { grid-column: 2; grid-row: 3 / span 2; }
+    .card-blue.card-tall { grid-column: 1; grid-row: 3 / span 2; }
+    .card-medium { grid-column: span 2; }
+
+    /* Flavors */
+    .flavors-container {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .flavor-card {
+        flex: none;
+        width: 45%;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    h1, .benefits-title, .benefits-title2 {
+        font-size: 2.8rem;
+    }
+
+    .flavors-title, .flavors-title2 {
+        font-size: 2.5rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero-bottles-img {
+        max-width: 100%;
+    }
+
+    /* Stack Benefits Grid */
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+
+    .grid-card {
+        grid-column: span 1 !important;
+        grid-row: auto !important;
+        padding: 40px 25px;
+        min-height: 300px;
+    }
+
+    .card-tall .card-img, .card-img {
+        height: 300px;
+    }
+
+    /* Stack Flavors */
+    .flavor-card {
+        width: 100%;
+    }
+
+    .benefits-section, .flavors-section {
+        padding: 60px 20px;
+    }
+
+    .ticker-pill {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, .benefits-title, .benefits-title2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-image-section {
+        min-height: 300px;
+    }
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: #fdf5e6;
+    padding: 50px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonials-header {
+    text-align: center;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.testimonials-title {
+    font-family: 'RocaOneBold';
+    font-size: 4rem;
+    line-height: 0.8;
+}
+
+.testimonials-title2 {
+    font-family: 'RocaOneRegular';
+    font-size: 4rem;
+    line-height: 1.1;
+}
+
+.floating-assets img {
+    position: absolute;
+    width: 60px;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+    z-index: 2;
+}
+
+
+
+.testimonials-carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.testimonials-track {
+    display: flex;
+    gap: 30px;
+    padding: 20px 0;
+    transition: transform 0.5s ease-out;
+}
+
+@keyframes carouselScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.testimonial-card {
+    min-width: 550px;
+    border-radius: 40px;
+    padding: 30px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity: 0.5;
+    transform: scale(0.9);
+    filter: blur(1px);
+}
+
+.testimonial-card.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 10;
+    filter: blur(0);
+}
+
+.testimonial-card.active p {
+    font-family: 'RocaOneSemibold';
+    font-weight: 900;
+}
+
+.testimonial-card p {
+    font-family: 'HelveticaRoman';
+    font-size: 1.6rem;
+    line-height: 1.35;
+    margin: 0;
+    color: #3b1c1c;
+}
+
+.card-orange { background-color: #fca11a; }
+.card-red-light { background-color: #f47b85; color: white !important; }
+.card-brown-dark { background-color: #6a3e37; color: white !important; }
+.card-pink-soft { background-color: #f9d8de; }
+
+.testimonial-card.card-red-light p, 
+.testimonial-card.card-brown-dark p {
+    color: white;
+}
+
+/* Controls */
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.control-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #3b1c1c;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+    background-color: #3b1c1c;
+    color: white;
+}
+
+/* Responsive adjustments for testimonials */
+@media (max-width: 768px) {
+    .testimonial-card {
+        min-width: 320px;
+        padding: 30px;
+        height: 200px;
+    }
+    
+    .testimonial-card p {
+        font-size: 1.1rem;
+    }
+    
+    .testimonials-title, .testimonials-title2 {
+        font-size: 2.8rem;
+    }
+}
